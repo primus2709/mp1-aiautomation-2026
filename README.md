@@ -7,7 +7,7 @@
 
 ---
 
-## 📌 Tentang Project Ini
+## Tentang Project Ini
 
 Project ini bertujuan untuk **mengambil data serial TV** dari **TMDB (The Movie Database) API**, lalu **membersihkan data tersebut** agar siap digunakan untuk analisis lebih lanjut. Secara garis besar, alurnya adalah:
 
@@ -23,7 +23,7 @@ Notebook ini cocok dipelajari oleh siapa saja yang ingin belajar cara:
 
 ---
 
-## 🛠️ Persyaratan (Requirements)
+## Persyaratan (Requirements)
 
 Sebelum menjalankan notebook ini, pastikan sudah menyiapkan:
 
@@ -47,7 +47,7 @@ API_KEY=isi_dengan_api_key_TMDB_kamu
 
 ---
 
-## 🚶 Langkah-Langkah dalam Notebook
+## Langkah-Langkah dalam Notebook
 
 Notebook ini terbagi menjadi **6 tahap** utama. Berikut penjelasan tiap tahap:
 
@@ -92,7 +92,7 @@ Setelah data terkumpul, dilakukan pemeriksaan dan pembersihan berdasarkan 3 krit
    - Tipe data diubah menjadi **datetime** menggunakan `pd.to_datetime()` agar bisa dianalisis berdasarkan waktu (misalnya untuk mencari tren per tahun).
 
 ### **Tahap 5 — Menyimpan Hasil**
-- Data yang sudah bersih (`df_bersih`) disimpan ke dalam file **`dataset_berita.csv`**.
+- Data yang sudah bersih (`df_bersih`) disimpan ke dalam file **`dataset_favTV.csv`**.
 - File tersebut kemudian dibaca kembali untuk memastikan proses penyimpanan berhasil (933 baris, 15 kolom).
 
 ### **Tahap 6 — Rangkuman Hasil (Bahan untuk Slide)**
@@ -119,9 +119,9 @@ Notebook menutup dengan mencetak ringkasan angka-angka penting dari keseluruhan 
 
 ---
 
-## 📂 Struktur Data Akhir
+## Struktur Data Akhir
 
-Dataset akhir (`dataset_berita.csv`) memiliki **933 baris** dan **15 kolom**, di antaranya:
+Dataset akhir (`dataset_favTV.csv`) memiliki **933 baris** dan **15 kolom**, di antaranya:
 - `id` — ID unik serial TV di TMDB
 - `name` / `original_name` — nama serial TV
 - `overview` — ringkasan cerita
@@ -133,18 +133,17 @@ Dataset akhir (`dataset_berita.csv`) memiliki **933 baris** dan **15 kolom**, di
 
 ---
 
-## ▶️ Cara Menjalankan Notebook
+## Cara Menjalankan Notebook
 
 1. Pastikan file `.env` sudah dibuat dan berisi API key TMDB yang valid.
 2. Buka notebook `mini_project_1_Muhammad_Amar_Primus_Firdaus.ipynb` di Jupyter Notebook/JupyterLab.
 3. Jalankan setiap sel secara berurutan dari atas ke bawah (**Run All** atau `Shift + Enter` satu per satu).
 4. Tunggu proses pengambilan data selesai (akan terlihat status `Page 1 | Status Code: 200`, dst., hingga seluruh halaman selesai diambil).
-5. Setelah selesai, cek file **`dataset_berita.csv`** yang otomatis terbentuk di folder yang sama — itulah hasil akhir data yang sudah bersih dan siap dianalisis.
+5. Setelah selesai, cek file **`dataset_favTV.csv`** yang otomatis terbentuk di folder yang sama — itulah hasil akhir data yang sudah bersih dan siap dianalisis.
 
 ---
 
-## 💡 Catatan Tambahan
+## Catatan Tambahan
 
-- Nama file output adalah `dataset_berita.csv`, meskipun isinya adalah data **serial TV** (bukan berita) — ini hanya penamaan file dari penulis notebook.
 - Jika jumlah `total_results` di TMDB berubah seiring waktu, jumlah data yang berhasil diambil bisa sedikit berbeda dari 1000 baris.
 - Karena menggunakan API key pribadi, **jangan membagikan file `.env`** ke publik (misalnya saat mengunggah project ke GitHub, tambahkan `.env` ke dalam `.gitignore`).
